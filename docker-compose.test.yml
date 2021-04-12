@@ -2,8 +2,9 @@ version: "3.8"
 services:
   sut:
     build: .
-    command: "ls -lah /test"
+    command: "ls -lah /haha"
     #entrypoint: ["/bin/sh", "-c"]
     working_dir: /test
     volumes:
       - $PWD/test:/test
+      - $PWD:/haha
