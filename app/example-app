@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+if [ "${1}" == "--fail" ]; then
+  echo "example-app: fail!"
+  exit 1
+fi
+
+echo "example-app: all good"
+exit 0
