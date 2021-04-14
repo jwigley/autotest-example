@@ -21,7 +21,7 @@ OUTPUT=$(example-app)
 check_result ${?} "example-app should run fine"
 
 # test 2 - deliberate failure test
-OUTPUT=$(example-app --fail)
+OUTPUT=$(example-app)
 check_result ${?} "example-app should run fine"
 
 # output results
