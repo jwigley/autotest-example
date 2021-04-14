@@ -1,10 +1,6 @@
 version: "3.8"
 services:
   sut:
-    build: .
-    command: "example-app"
-    #entrypoint: ["/bin/sh", "-c"]
-    working_dir: /test
-    volumes:
-      - $PWD/test:/test
-      - $PWD:/haha
+    build:
+      context: .
+      target: "test"
