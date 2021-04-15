@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Build & Test
 
 on:
   push:
@@ -9,12 +9,17 @@ on:
 jobs:
 
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
-    - name: Build test Docker image
+    - name: Build docker image
+      run: docker build . --file Dockerfile --tag autotest-example:latest
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build test docker image
       run: docker build . --file Dockerfile --target test --tag autotest-example:test
     - name: Run tests
       run: docker run autotest-example:test
