@@ -5,7 +5,8 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/jwigley/autotest-example.svg)](https://hub.docker.com/r/jwigley/autotest-example/)
 [![Docker Automated build](https://img.shields.io/docker/cloud/automated/jwigley/autotest-example.svg)](https://hub.docker.com/r/jwigley/autotest-example/)
 
-Docker autotest example.
+Formerly a Docker autotest example.
+Now doing the same thing (building and testing a docker image) with github actions and buildx.
 
 ## docker repository
 
